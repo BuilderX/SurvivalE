@@ -58,12 +58,12 @@ public class PathFinder {
 
             public ArrayList<Calandar.Point> findPath(Creature creature, Calandar.Point start, Calandar.Point end, int maxTries){
 
-                        open.clear();
-                        closed.clear();
-                        parents.clear();
-                        totalCost.clear();
-
-                        open.add(start);
+                open.clear();
+                closed.clear();
+                parents.clear();
+                totalCost.clear();
+                open.add(start);
+                
                 for (int tries = 0; tries < maxTries && open.size() > 0; tries++) {
 
                     Calandar.Point closest = getClosestPoint(end);
@@ -84,7 +84,7 @@ public class PathFinder {
 
 
 
-                return null;
+                        return null;
 
             }
 
