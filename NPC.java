@@ -13,17 +13,17 @@ public class NPC extends Entity{
 				ANGRY, DOMESTICATABLE, TAME, AGITATED
 				
 			}
-			public static enum Direction{
+	public static enum Direction{
 				UP,DOWN,LEFT,RIGHT
 				
 			}
-			public static enum behavior{
+	public static enum behavior{
 				WILDPATH,ERRATIC,RESTFUL
 			}
 			
-			protected ArrayList<String> Sounds = new ArrayList<String>(213);	
+	protected ArrayList<String> Sounds = new ArrayList<String>(213);	
 			
 			private Inventory[] set;
 			private Item i;
 			AnimalData animal;
-}
+			}
