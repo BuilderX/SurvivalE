@@ -9,17 +9,28 @@ public class TribeData extends Entity {
             int numOfMemebers;
             boolean producing;
             Calendar ticks;
+            NameGenerator nameGen;
+            Random ran = new Random();
             Creature NewTribeMemeber;
-    public TribeData(String name, int numOfMemebers, boolean producing) {
+            
+    public TribeData(String name, int numOfMembers, boolean producing) {
         this.name = name;
-        this.numOfMemebers = numOfMemebers;
+        this.numOfMembers = numOfMembers;
         this.producing = producing;
-        if(ticks.TICKS_PER_DAY ==5000 ||ticks.TICKS_PER_DAY == 10000){
-        	
-        	numOfMemebers += 2;
-        	
-        	Creature NewMember = new Creature(NewTribeMemeber);
-        	
+        while(ticks.TICKS_PER_DAY ==5000 ||ticks.TICKS_PER_DAY == 10000){
+        	  producing = true;
+        	if(true){
+        	  numOfMemebers += 1;
+        	  Creature NewMember = new Creature(NewTribeMember);
+        	  
+        	  nameGen = new NameGenerator();
+        	  NewMember.name = nameGen.nameArray[ran.nextInt(nameArray.length - 0 + 1) + 0];
+        	  
+        	}
+        }else{
+              producing = true;      
+                    
+                    
         }
     }
 
