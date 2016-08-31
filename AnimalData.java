@@ -56,28 +56,28 @@ public class AnimalData {
 		this.healthiness = healthiness;
 	}
 	public boolean isSick() {
-		
-		
-		
+		if(this.hp > 2){
+		    this.hp -= 1;
+		    this.sick = true;
+		}
 		return sick;
+	
 	}
 	public void setSick(boolean sick) {
 		this.sick = sick;
 	
-	
-	
 	}
 	public void ifSick(){
 		
-	if(a.sick == true){
-	for(int g = a.healthiness, o = a.hp;g>=20 || o<=20;g--,o--){
-				
-			}
-			
+          if(a.sick == true){
+         	for(int g = a.healthiness, o = a.hp;g>=20 || o<=20;g--,o--){
+ 	
+                	}
 		}
 	}
 	
 	public boolean isAttacking() {
+	  	  this.isAttacking = true;
 		return isAttacking;
 	}
 	public void setAttacking(boolean isAttacking) {
@@ -87,7 +87,6 @@ public class AnimalData {
 		if(daysNotFed > 4){
 			//enum behavior = ANGRY
 		}
-		
 		return daysNotFed;
 	}
 	public void setDaysNotFed(int daysNotFed) {
