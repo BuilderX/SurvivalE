@@ -14,11 +14,15 @@ public class Inventory extends Item {
 			}
 
 			public void add(Item item){
-				list.add(item);
-
+			      if(item != null){
+			       	 list.add(item);
+                               }else{
+                               	console.log(item + " Item equal to null");
+                               }
+                              
 			}
 			public void remove(Item item){
-					list.remove(item);
+				list.remove(item);
 
 			}
 			public  void Clear(){
