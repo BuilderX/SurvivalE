@@ -6,9 +6,8 @@ package Calandar;
 public class FieldOfView {
         private World world;
         private  int depth;
-
         private  boolean [][] visible;
-    private FieldOfView fov;
+        private FieldOfView fov;
 
     public  boolean isVisible(int x, int y , int z){
 
@@ -23,21 +22,22 @@ public class FieldOfView {
     public FieldOfView(World world) {
         this.world = world;
         this.visible = new boolean[world.getWidth()][world.getHeight()];
-        //this.tiles = new Tile[world.width][world.height];
-/*
+        this.tiles = new Tile[world.width][world.height];
+
         for (int x = 0; x < world.width(); x++){
             for (int y = 0; y < world.height(); y++){
                 for (int z = 0; z < world.depth(); z++){
-                    tiles[x][y][z] = Tile.UNKNOWN;
+                    tiles[x][y][z] = Tile.UNKNOWN; // Labels area as black fog, out of players view till player steps on tile
                 }
             }
-        }*/
+        }
+        
 
 
 
     }
     public void update(int wx, int wy, int wz, int r){
-        /*depth = wz;
+        depth = wz;
         visible = new boolean[world.width()][world.height()];
 
         for (int x = -r; x < r; x++){
@@ -51,13 +51,13 @@ public class FieldOfView {
 
                 for (Point p : new Line(wx, wy, wx + x, wy + y)){
                     Tile tile = world.tile(p.x, p.y, wz);
-                    visible[p.x][p.y] = true;
+                    visible[p.x][p.y] = true; // position is revealed player in position
                     tiles[p.x][p.y][wz] = tile;
 
                     if (!tile.isGround())
                         break;
                 }
-            }*/
+            }
         }
     // For player
     public boolean canSee(int wx, int wy, int wz) {
