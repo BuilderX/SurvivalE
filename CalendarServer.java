@@ -41,12 +41,13 @@ public class CalendarServer implements IDate{
 	}
 	
 	private Season getNextSeason() {
-		// Skipps to the next season
-		return date.getSeason().ordinal() < Season.values().length -1 ? Season.values()[date.getSeason().ordinal() + 1] : Season.values()[0];
+		// Checks enum value position(ordinal) if it's less than the last position increment otherise it's in the first position
+		return date.getSeason().ordinal() < Season.values().length -1 ? 
+		       Season.values()[date.getSeason().ordinal() + 1] : Season.values()[0];
 	}
 
 
-	// sets the date
+	// sets the full date
 	public void setDate(int day, Season season, int year){
 		date.setDay(day).setSeason(season).setYear(year);
 	}
