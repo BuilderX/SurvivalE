@@ -1,5 +1,5 @@
 public class NameGenerator{
-      String NameArray[];
+      String nameArray[];
 
 
          public NameGenerator(){
