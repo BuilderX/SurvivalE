@@ -32,8 +32,9 @@ public class PlayerData {
 		this.sick = sick;
 		this.wellNessValue = wellNessValue;
 		Inventory = inventory;
+		entity_Relationships.values();
+		
 	}
-
 	public HashMap<String, NPC> getEntity_Relationshipss() {
 		return entity_Relationships;
 	}
@@ -45,6 +46,16 @@ public class PlayerData {
 	          entity_Relationships.put(s,AI);
 		}
 	}
+	public void clearMap(){
+	       entity_Relationships.clear();
+	}
+	public void searchMap(NPC n){
+		if(entity_Relationshipss.isEmpty() || 
+		   entity_Relationshipss.size() < 1){ return null;}
+	          if(entity_Relationshipss.containsValue(n)){
+		         System.out.println('Value found');
+		  }
+	}
 	public void setEntity_Relationshipss(HashMap<String, NPC> entity_Relationshipss) {
 		
 		if(entity_Relationshipss == null){ return null}
@@ -52,7 +63,7 @@ public class PlayerData {
 	}
 
 	public double getStaminaMax() {
-		return staminaMax;
+		  return staminaMax;
 	}
 
 	public void setStaminaMax(double staminaMax) {
@@ -61,12 +72,12 @@ public class PlayerData {
 	}
 
 	public double getFatigueMin() {
-		return fatigueMin;
+		 return fatigueMin;
 	}
 
 
 	public double getStamina() {
-		return stamina;
+		 return stamina;
 	}
 
 	public void setStamina(double stamina) {
@@ -84,7 +95,7 @@ public class PlayerData {
 	}
 
 	public Calandar.Inventory getInventory() {
-		return Inventory;
+		  return Inventory;
 	}
 
 	public void setInventory(Calandar.Inventory inventory) {
@@ -125,7 +136,7 @@ public class PlayerData {
 
 	public void setSick(Disease sick) {
 		if(fatigue === null){ return null}
-		this.sick = sick;
+		 this.sick = sick;
 	}
 
 	public int getWellNessValue() {
@@ -134,16 +145,15 @@ public class PlayerData {
 
 	public void setWellNessValue(int wellNessValue) {
 		if(wellNessValue < 1){ return 0}
-		this.wellNessValue = wellNessValue;
+		 this.wellNessValue = wellNessValue;
 	}
 
 	public PlayerData(int tribeMembers) {
 		if(tribeMembers < 1){ return 0}
-		TribeMembers = tribeMembers;
+		   TribeMembers = tribeMembers;
 	}
 
 	public int getTribeMembers() {
-		
 		return TribeMembers;
 	}
 }
