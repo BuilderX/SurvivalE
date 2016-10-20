@@ -12,8 +12,20 @@ public class Calendar {
 		}
 
 		private static int getInteger(String string, int i) {
-			
-			
-			return i;
+         	   return i;
 		}
+	       private int getDayPerSeason(){
+	           return DAYS_PER_SEASON;
+	       }
+	       private int getTicksPerSeason(){
+	           return TICKS_PER_DAY;
+	       }
+	
+	       private int setDayPerSeason(DPS){
+	           this.DAYS_PER_SEASON = DPS;
+	       }
+	       private int setTicksPerSeason(TPD){
+	           this.TICKS_PER_DAY = TPD;
+	       }
+	
 }
