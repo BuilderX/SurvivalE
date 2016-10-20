@@ -17,7 +17,10 @@ public class PlayerData {
 	double currentBodyTemperature;
 	Disease sick;
 
-	public PlayerData(HashMap<String, NPC> entity_Relationships, double staminaMax, double fatigueMin, double stamina, double fatigue, Calandar.Inventory inventory, double exp, int waterAmount, double currentBodyTemperature, Disease sick, int wellNessValue) {
+	public PlayerData(HashMap<String, NPC> entity_Relationships, double staminaMax, double fatigueMin, double stamina,
+			  double fatigue, Calandar.Inventory inventory, double exp, int waterAmount, double currentBodyTemperature,
+			  Disease sick, int wellNessValue) {
+		
 		this.entity_Relationships = entity_Relationships;
 		this.staminaMax = staminaMax;
 		this.fatigueMin = fatigueMin;
