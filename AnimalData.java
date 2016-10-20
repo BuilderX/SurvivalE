@@ -8,9 +8,11 @@ public class AnimalData {
 	private int healthiness;
 	boolean sick;
 	boolean isAttacking;
+	boolean Alive;
 	int daysNotFed;
 	int angerLevel;
 	AnimalData a;
+	enum Behavior;
 	
 	
 	public AnimalData(int hp, int attack, int def, int lifeSpan,
@@ -50,6 +52,12 @@ public class AnimalData {
 		this.lifeSpan = lifeSpan;
 	}
 	public int getHealthiness() {
+		if(this.healthiness < 20){
+		   
+		   this.sick = true;
+	 	   this.lifeSpan -= 1;
+			
+		}
 		return healthiness;
 	}
 	public void setHealthiness(int healthiness) {
@@ -59,6 +67,9 @@ public class AnimalData {
 		if(this.hp > 2){
 		    this.hp -= 1;
 		    this.sick = true;
+		    this.attack -= 5;
+		}else if(this.hp < 1 ){
+			this.Alive = false;
 		}
 		return sick;
 	
@@ -69,13 +80,12 @@ public class AnimalData {
 	}
 	public void ifSick(){
 		
-          if(a.sick == true){
-         	for(int g = a.healthiness, o = a.hp;g>=20 || o<=20;g--,o--){
- 	
-                	}
+          if(this.sick == true){
+         	for(int g = this.healthiness, o = this.hp; g >= 20 || o < = 20; g--,o--){
+ 	                      
+                   }
 		}
 	}
-	
 	public boolean isAttacking() {
 	  	  this.isAttacking = true;
 		return isAttacking;
@@ -84,9 +94,14 @@ public class AnimalData {
 		this.isAttacking = isAttacking;
 	}
 	public int getDaysNotFed() {
+		int currentHp = getHp(), int Healthy = getHealthiness();
 		if(daysNotFed > 4){
-			//enum behavior = ANGRY
-		}
+	              Behavior = ANGRY;
+		   if(Behavior=== 'Angry'){
+		      while(currentHp < 50 && currentHp > 10){
+			    Healthy -= 40;
+			   }   
+			}}
 		return daysNotFed;
 	}
 	public void setDaysNotFed(int daysNotFed) {
