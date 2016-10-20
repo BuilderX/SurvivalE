@@ -8,7 +8,7 @@ public class AnimalData {
 	private int healthiness;
 	boolean sick;
 	boolean isAttacking;
-	boolean Alive;
+	boolean Alive = false;
 	int daysNotFed;
 	int angerLevel;
 	AnimalData a;
@@ -69,10 +69,9 @@ public class AnimalData {
 		    this.sick = true;
 		    this.attack -= 5;
 		}else if(this.hp < 1 ){
-			this.Alive = false;
+		    this.Alive = false;
 		}
 		return sick;
-	
 	}
 	public void setSick(boolean sick) {
 		this.sick = sick;
