@@ -5,9 +5,9 @@ package Calandar;
  */
 public class TribeData extends Entity {
 
-            String name;
-            int numOfMemebers;
-            boolean producing;
+            String name = "";
+            int numOfMemebers = 0;
+            boolean producing = false;
             Calendar ticks;
             NameGenerator nameGen;
             Random ran = new Random();
@@ -17,7 +17,7 @@ public class TribeData extends Entity {
         this.name = name;
         this.numOfMembers = numOfMembers;
         this.producing = producing;
-        while(ticks.TICKS_PER_DAY ==5000 ||ticks.TICKS_PER_DAY == 10000){
+        while(ticks.TICKS_PER_DAY ==5000 || ticks.TICKS_PER_DAY == 10000){
         	  producing = true;
         	if(true){
         	  numOfMemebers += 1;
