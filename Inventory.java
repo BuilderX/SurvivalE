@@ -9,8 +9,6 @@ public class Inventory extends Item {
 			public Inventory() {
 				list = new LinkedList<Item>();
 			
-			
-			
 			}
 
 			public void add(Item item){
