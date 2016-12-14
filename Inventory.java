@@ -4,7 +4,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Inventory extends Item {
+			String name;
+			int lv = 0;
+			int att = 0;
+			int damage = 0;
+			Stones[] gems = new Stones[5];
 			
+	
+	
 			List<Item> list;
 			public Inventory() {
 				list = new LinkedList<Item>();
