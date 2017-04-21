@@ -3,7 +3,15 @@ package Calandar;
 import java.util.ArrayList;
 
 public class NPC extends Entity{
+		private Inventory[] set;
+		private Item i;
+		AnimalData animal;
 
+	
+	{
+	protected ArrayList<String> Sounds = new ArrayList<String>(213);	
+	}
+	
 	@Override
 	public void update(float data) {
 
@@ -20,10 +28,17 @@ public class NPC extends Entity{
 	public static enum behavior{
 				WILDPATH,ERRATIC,RESTFUL
 			}
-			
-	protected ArrayList<String> Sounds = new ArrayList<String>(213);	
-			
-			private Inventory[] set;
-			private Item i;
-			AnimalData animal;
-			}
+	protected String getListItem(ArrayList a){
+	 	    return a.get(o);
+	}		
+	protected void addTOlist(a){
+		if(String.valueOf(a)){
+		       Sounds.add(a);	
+	  	}
+	  	if(a instanceof String){
+	               Sounds.add(a);	
+	  	}
+	}
+	
+	}
+   
