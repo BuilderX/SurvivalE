@@ -14,24 +14,25 @@ public class Creature {
     public int x,y,z;
     private World world;
     private CreatureAi creatureAi;
-    private int maxHp;
-    private int hp;
+    private int maxHp = 100;
+    private int hp = 0;
     private  int attackValue;
-    private int defenseValue;
+    private int defenseValue;	
+    private int maxFood = 500;	
     private Creature ai;
-
+    private int food = 0;
 
     public Creature(Creature creature) {
-        super();
-    /*    this.maxFood = 1000;
-        this.food = maxFood / 3 * 2;
-   */ }
+         super();
+    }
 
     public Creature(World world, int z, int y, int x) {
         this.world = world;
         this.z = z;
         this.y = y;
         this.x = x;
+        this.food = Math.round(maxFood / 6);
+    	this.hp = maxHP;
     }
 
     public boolean canEnter(int x, int y, Point z) {  return true;
