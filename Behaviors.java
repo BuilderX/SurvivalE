@@ -4,9 +4,9 @@ public class Behaviors{
     
     }
      AnimalData ani;
-    public Behaviors(AnimalData a){
-       this.ani = a;
-    }
+      public Behaviors(AnimalData a){
+         this.ani = a;
+      }
     public void State(ani){
          switch(ani.CurrentFeeling){
             case ANGRY:
@@ -17,29 +17,30 @@ public class Behaviors{
                  ani.angerLevel += 50;
                  ani.hungerLv -= 5;
                  ani.mentalHealth -= 10;
-              
             break;
             case HAPPY:
                  ani.lifeSpan += 1;
                  ani.healthiness += 10;
-                if(ani.healthiness > 200){
-                      ani.attack += 15;
-                 }
+                 if(ani.healthiness >= 200){ani.attack += 15;}
                  ani.angerLevel -= 20;
-                 if(ani.angerLevel < 0){
-                      ani.angerLevel = 0;
-                 }
+                 if(ani.angerLevel <= 0){  ani.angerLevel = 0;}
             break;
             case SAD:
                  ani.healthiness -= 10;
                  ani.hungerLv += 10;
                  if(ani.healthiness < 0 ){
-                      ani.Alive = false;
-                      initDeath();
+                    ani.Alive = false;
+                    initDeath();
                  }
                  int z = Math.round(Math.Random(0) * 1);
+                 if(z == 1){
+                     ani.mentalHealth -= 10;
+                 }
+                 else if(z == 0){
+                     ani.mentalHealth -= 30;
+                 }
              
-                 ani.angerLevel += 20;
+                 ani.angerLevel = 0;
                  break;
             case DEPRESSED:
             break;
@@ -49,7 +50,7 @@ public class Behaviors{
                ani.hungerLv -= 10; 
              if(ani.hungerLv > 110){
                   ani.health -= ani.health;
-                 if(ani.health < 0){
+                 if(ani.health <= 0){
                   ani.alive = false;
                   initDeath();
                  }
@@ -57,17 +58,22 @@ public class Behaviors{
             break;
             case ILLUSIONS:
                  ani.mentalHealth -= 10;
-              
+                 if(ani.mentalHealth <= 0){
+                     generateIllutions();
+                 }
             break;
             CASE PARALYZED;
                  ani.healthiness -= 10;
-              
-             
             break;
             default:
             break;
          }
     }
+  
+    private void generateIllutions(){
+ 
+    }
+  
     public void cycle(){
        for( String a: B.values()){
              System.out.println(a);
