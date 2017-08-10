@@ -27,6 +27,7 @@ public class AnimalData {
 		this.sick = sick;
 		this.daysNotFed = daysNotFed;
 		this.angerLevel = angerLevel;
+		this.Alive = true;
 	}
 	public int getHp() {
 		return hp;
