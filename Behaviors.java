@@ -3,9 +3,9 @@ public class Behaviors{
      ANGRY,SAD,HAPPY,NEUTRAL,DEPRESSED,MAD,ILLUSIONS,HUNRGY,PARALYZED
     
     }
-     Behavior B;
-    public Behaviors(Behavior B ){
-       this.B = B;
+     Animal a;
+    public Behaviors(Animal a ){
+       this.a = a;
     }
     public void State(){
          switch(B){
