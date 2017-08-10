@@ -6,6 +6,7 @@ public class AnimalData {
 	private int def;
 	private int lifeSpan;
 	private int healthiness;
+	private String CurrentFeeling;
 	boolean sick;
 	boolean isAttacking;
 	boolean Alive = false;
