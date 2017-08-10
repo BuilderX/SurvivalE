@@ -4,9 +4,9 @@ public class Behaviors{
     
     }
      AnimalData ani;
-      public Behaviors(AnimalData a){
-         this.ani = a;
-      }
+      ///public Behaviors(AnimalData a){
+      //   this.ani = a;
+      //}
     public void State(ani){
          switch(ani.CurrentFeeling){
             case ANGRY:
