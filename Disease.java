@@ -15,10 +15,9 @@ public class Disease {
     }
 
     Disease(Player p){
-
-
-            }
-
+    
+    }
+            
     public String getName() {
         return name;
     }
