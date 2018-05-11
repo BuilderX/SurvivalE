@@ -1,15 +1,18 @@
-public class Behaviors{
-  public enum Behaviors{
-     ANGRY,SAD,HAPPY,NEUTRAL,DEPRESSED,MAD,ILLUSIONS,HUNRGY,PARALYZED
+
+enum Behaviors{
+     ANGRY("ANGRY"),SAD("SAD"),HAPPY("HAPPY"),NEUTRAL("NEUTRAL"),DEPRESSED("DEPRESSED"),MAD("MAD"),ILLUSIONS("ILLUSIONS"),HUNRGY("HUNRGY"),PARALYZED("PARALYZED");
     
-    }
-     AnimalData ani;
+     public String Emotion;
       ///public Behaviors(AnimalData a){
       //   this.ani = a;
       //}
-    public void State(ani){
-         switch(ani.CurrentFeeling){
-            case ANGRY:
+    private Behaviors(String em){
+     	this.Emotion = em;
+    }
+     
+    public void State(Behaviors beh, AnimalData ani){
+         switch(beh.Emotion){
+            case "ANGRY":
                  ani.attack += 5;
                  ani.def -= 10;
                  ani.lifeSpan -= 1;
@@ -18,14 +21,14 @@ public class Behaviors{
                  ani.hungerLv -= 5;
                  ani.mentalHealth -= 10;
             break;
-            case HAPPY:
+            case "HAPPY":
                  ani.lifeSpan += 1;
                  ani.healthiness += 10;
                  if(ani.healthiness >= 200){ani.attack += 15;}
                  ani.angerLevel -= 20;
                  if(ani.angerLevel <= 0){  ani.angerLevel = 0;}
             break;
-            case SAD:
+            case "SAD":
                  ani.healthiness -= 10;
                  ani.hungerLv += 10;
                  if(ani.healthiness < 0 ){
@@ -42,11 +45,11 @@ public class Behaviors{
              
                  ani.angerLevel = 0;
                  break;
-            case DEPRESSED:
+            case "DEPRESSED":
             break;
-            case MAD;
+            case "MAD":
             break;
-            case HUNGRY:
+            case "HUNGRY":
                ani.hungerLv -= 10; 
              if(ani.hungerLv > 110){
                   ani.health -= ani.health;
@@ -56,13 +59,13 @@ public class Behaviors{
                  }
              }
             break;
-            case ILLUSIONS:
+            case "ILLUSIONS":
                  ani.mentalHealth -= 10;
                  if(ani.mentalHealth <= 0){
                      generateIllutions();
                  }
             break;
-            CASE PARALYZED;
+            case "PARALYZED":
                  ani.healthiness -= 10;
             break;
             default:
