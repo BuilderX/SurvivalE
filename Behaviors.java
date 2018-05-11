@@ -24,23 +24,23 @@ enum Behaviors{
             case "HAPPY":
                  ani.lifeSpan += 1;
                  ani.healthiness += 10;
-                 if(ani.healthiness >= 200){ani.attack += 15;}
-                 ani.angerLevel -= 20;
-                 if(ani.angerLevel <= 0){  ani.angerLevel = 0;}
+                  if(ani.healthiness >= 200){ani.attack += 15;}
+                   ani.angerLevel -= 20;
+                  if(ani.angerLevel <= 0){ani.angerLevel = 0;}
             break;
             case "SAD":
                  ani.healthiness -= 10;
                  ani.hungerLv += 10;
-                 if(ani.healthiness < 0 ){
-                    ani.Alive = false;
-                    initDeath();
+                  if(ani.healthiness < 0 ){
+                     ani.Alive = false;
+                     initDeath();
                  }
                  int z = Math.round(Math.Random(0) * 1);
                  if(z == 1){
-                     ani.mentalHealth -= 10;
+                    ani.mentalHealth -= 10;
                  }
                  else if(z == 0){
-                     ani.mentalHealth -= 30;
+                        ani.mentalHealth -= 30;
                  }
              
                  ani.angerLevel = 0;
@@ -53,7 +53,7 @@ enum Behaviors{
                ani.hungerLv -= 10; 
              if(ani.hungerLv > 110){
                   ani.health -= ani.health;
-                 if(ani.health <= 0){
+               if(ani.health <= 0){
                   ani.alive = false;
                   initDeath();
                  }
@@ -66,7 +66,7 @@ enum Behaviors{
                  }
             break;
             case "PARALYZED":
-                 ani.healthiness -= 10;
+                  ani.healthiness -= 10;
             break;
             default:
             break;
