@@ -45,7 +45,7 @@ public enum Season {
 		}
 
 		public int getThunder() {
-			int ran = (int) Math.round(Math.random() * 10);
+			int ran = (int) Math.round(Math.random() * 5);
 			return thunder * ran;
 		}
 
