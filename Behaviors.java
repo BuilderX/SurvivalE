@@ -2,7 +2,7 @@
 enum Behaviors{
      ANGRY("ANGRY"),SAD("SAD"),HAPPY("HAPPY"),NEUTRAL("NEUTRAL"),DEPRESSED("DEPRESSED"),MAD("MAD"),ILLUSIONS("ILLUSIONS"),HUNRGY("HUNRGY"),PARALYZED("PARALYZED");
     
-     public String Emotion;
+    public String Emotion;
       ///public Behaviors(AnimalData a){
       //   this.ani = a;
       //}
