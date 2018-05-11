@@ -2,10 +2,10 @@ package Calandar;
 
 public enum Season {
 		
-		SPRING("Spring",16800,12000,1,1 ,0.6082D,0.01F,1850l, 0x00D900),
-		SUMMER("Spring",25000,5000,0,3 ,0.6082D,0.01F,1850l, 0x00D900),
-		FALL("Spring",12000,13000,3,2,0.6082D,0.01F,1850l, 0x00D900),
-		WINTER("Spring",11000,12500,2,1,0.6082D,0.01F,1850l, 0x00D900);
+		SPRING("Spring",16800,12000,3,1 ,0.6082D,0.01F,1850l, 0x00D900),
+		SUMMER("Spring",25000,5000,1,3 ,0.6082D,0.01F,1850l, 0x00D900),
+		FALL("Spring",12000,13000,2,2,0.6082D,0.01F,1850l, 0x00D900),
+		WINTER("Spring",11000,12500,4,1,0.6082D,0.01F,1850l, 0x00D900);
 		
 		//private final ResourceLocation resource;
 		private final int rain;
