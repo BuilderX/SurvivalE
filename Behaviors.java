@@ -24,9 +24,13 @@ enum Behaviors{
             case "HAPPY":
                  ani.lifeSpan += 1;
                  ani.healthiness += 10;
-                  if(ani.healthiness >= 200){ani.attack += 15;}
+                  if(ani.healthiness >= 200){
+                     ani.attack += 15;
+                  }
                    ani.angerLevel -= 20;
-                  if(ani.angerLevel <= 0){ani.angerLevel = 0;}
+                  if(ani.angerLevel <= 0){
+                     ani.angerLevel = 0;
+                  }
             break;
             case "SAD":
                  ani.healthiness -= 10;
