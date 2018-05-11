@@ -101,8 +101,9 @@ public class AnimalData {
 		   if(beh.Emotion === "Angry"){
 		      while(currentHp < 50 && currentHp > 10){
 			     beh.State(beg.Emotion,this.a);
-			   }   
-			}}
+	              }   
+		   }
+		}
 		return daysNotFed;
 	}
 	public void setDaysNotFed(int daysNotFed) {
@@ -118,9 +119,6 @@ public class AnimalData {
          return "Hp:" + this.hp + " Attack:" + this.attack + " Defence:" + this.def + "Lifespan: "
                  +this.lifeSpan + "Healthiness: " + this.healthiness + "[ Current Feeling: " + this.CurrentFeeling 
 		 +"Sick: " + this.sick + " Hunger Level: "+ this.hungerLv + " Days Not Fed: "+ this.daysNotFed 
-		 +" Anger Level: "+ this.angerLevel + " ] "
-
-	;
-	  
+		 +" Anger Level: "+ this.angerLevel + " ] ";
     }
 }
