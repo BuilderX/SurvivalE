@@ -8,11 +8,11 @@ public class AnimalData {
 	private int healthiness;
 	private int hungerLv;
 	private String CurrentFeeling;
+	private int daysNotFed;
+	private int angerLevel;
 	boolean sick;
 	boolean isAttacking;
-	boolean Alive = false;
-	int daysNotFed;
-	int angerLevel;
+	boolean Alive = true;
 	AnimalData a;
 	enum Behavior;
 	
@@ -29,6 +29,7 @@ public class AnimalData {
 		this.daysNotFed = daysNotFed;
 		this.angerLevel = angerLevel;
 		this.Alive = true;
+		this.a = a;
 	}
 	public int getHp() {
 		return hp;
@@ -56,10 +57,8 @@ public class AnimalData {
 	}
 	public int getHealthiness() {
 		if(this.healthiness < 20){
-		   
 		   this.sick = true;
 	 	   this.lifeSpan -= 1;
-			
 		}
 		return healthiness;
 	}
@@ -78,15 +77,13 @@ public class AnimalData {
 	}
 	public void setSick(boolean sick) {
 		this.sick = sick;
-	
 	}
 	public void ifSick(){
-		
           if(this.sick == true){
-         	for(int g = this.healthiness, o = this.hp; g >= 20 || o < = 20; g--,o--){
+             for(int g = this.healthiness, o = this.hp; g >= 20 || o < = 20; g--,o--){
  	                      
-                   }
-		}
+             }
+          }
 	}
 	public boolean isAttacking() {
 	  	  this.isAttacking = true;
@@ -96,12 +93,14 @@ public class AnimalData {
 		this.isAttacking = isAttacking;
 	}
 	public int getDaysNotFed() {
-		int currentHp = getHp(), int Healthy = getHealthiness();
+		int currentHp = getHp();
+		int Healthy = getHealthiness();
+		
 		if(daysNotFed > 4){
-	              Behavior = ANGRY;
-		   if(Behavior=== 'Angry'){
+	              Behavior beh = Behavior.ANGRY;
+		   if(beh.Emotion === "Angry"){
 		      while(currentHp < 50 && currentHp > 10){
-			    Healthy -= 40;
+			     beh.State(beg.Emotion,this.a);
 			   }   
 			}}
 		return daysNotFed;
@@ -115,6 +114,13 @@ public class AnimalData {
 	public void setAngerLevel(int angerLevel) {
 		this.angerLevel = angerLevel;
 	}
-	
-	
+	public String toString(){
+         return "Hp:" + this.hp + " Attack:" + this.attack + " Defence:" + this.def + "Lifespan: "
+                 +this.lifeSpan + "Healthiness: " + this.healthiness + "[ Current Feeling: " + this.CurrentFeeling 
+		 +"Sick: " + this.sick + " Hunger Level: "+ this.hungerLv + " Days Not Fed: "+ this.daysNotFed 
+		 +" Anger Level: "+ this.angerLevel + " ] "
+
+	;
+	  
+    }
 }
