@@ -32,7 +32,7 @@ public enum Season {
 		}
 
 		public int getStartChance() {
-			return startChance;
+			return startChance / (int) Math.round(Math.random() * 10);
 		}
 
 		public int getEndChance() {
