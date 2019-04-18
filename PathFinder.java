@@ -102,32 +102,31 @@ public class PathFinder {
     }
 
     private void checkNeighbors(Creature creature, Calandar.Point end, Calandar.Point closest) {
-       /*            for(Calandar.Point neighbor : closest.neighbor8()){
-                	   			// sub for neihbor instead of creature
+                  for(Calandar.Point neighbor : closest.neighbor8()){
+                   // sub for neihbor instead of creature
                         if(closed.contains(neighbor) || !creature.canEnter(neighbor.x, neighbor.y, neighbor.z)
-                         && ! neighbor.equals(end) )continue;
+                         && ! neighbor.equals(end) ) continue;
 
-                       if(open.contains(neighbor))
+                        if(open.contains(neighbor)){
                                 reParent(closest, neighbor);
-                           else
+                       }else{
                                 reParent(closest, neighbor);
-                       }
-*/
+                    }
+               }
+ }
 
-                        }
-
-    private Calandar.Point getClosestPoint(Calandar.Point end) {
+          private Calandar.Point getClosestPoint(Calandar.Point end) {
                  Calandar.Point closest = open.get(0);
                     for(Calandar.Point other: open){
                         if(totalCost(other, end) < totalCost(closest, end)){
                                 closest = other;
 
                         }
-                    }
+               }
 
 
                      return closest;
-    }
+         }
             private  void reParentNeighborIfNecessary(Calandar.Point closest, Calandar.Point neighbor){
                 Calandar.Point originalParent = parents.get(neighbor);
                 double currentCost = costToGetTo(neighbor);
