@@ -4,35 +4,44 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Inventory extends Item {
-			String name;
-			int lv = 0;
-			int att = 0;
-			int damage = 0;
-			Stones[] gems = new Stones[5];
+       	               Item data;
+	  	       List<Item> list;
+	               Stones[] gems = new Stones[5];
+		       GoldAmount gold = null;
+	
+			Inventory(int Gamt){
+			   this.gold = Gamt;
+				
+			}
 			
-	
-	
-			List<Item> list;
 			public Inventory() {
-				list = new LinkedList<Item>();
-			
+				this.list = new LinkedList<Item>();
 			}
 
 			public void add(Item item){
 			      if(item != null){
-			       	 list.add(item);
+			       	 this.list.add(item);
                                }else{
-                               	console.log(item + " Item equal to null");
+                               	console.log(item + " Item Doesn't exist in bag");
                                }
-                              
 			}
+	
+			public Item selectItem(index){
+			     return this.list.get(index);
+			}
+			public Item selectSpecificItem(Item item){
+			     return this.list.indexOf(item);
+			}
+	
 			public void remove(Item item){
-				list.remove(item);
-
+				this.list.remove(item);
 			}
-			public  void Clear(){
-				list.clear();
-
+	
+			public  void ClearBag(){
+				this.list.clear();
+			}
+			public int getItemSize(){
+				return this.list.size();
 			}
 
 }
