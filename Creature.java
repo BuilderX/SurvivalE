@@ -21,7 +21,8 @@ public class Creature {
     private int maxFood = 500;	
     private Creature ai;
     private int food = 0;
-
+    private int visionRadius;
+ 
     public Creature(Creature creature) {
          super();
     }
@@ -61,17 +62,9 @@ public class Creature {
              amount = (int) Math.random() * amount  +1;
              other.modifyHp(-amount);
                 world.remove(other);
-
-
-
     }
 
-          //MediaStore.Audio
-            private String MakeSound(){
-
-
-             return MediaStore.EXTRA_DURATION_LIMIT;
-            }
+    private String MakeSound(){return MediaStore.EXTRA_DURATION_LIMIT;}
 
     public void doAction(String message, Object params){
                 int r = 9;
@@ -88,22 +81,15 @@ public class Creature {
                 other.notify();
             }
         }
-
-
-
     }
-
 
     private void modifyHp(int amount) {
         hp += amount;
-
         if(hp < 1){
-           // doAction("die");
             world.remove(this);
-
         }
     }
-    private int visionRadius;
+	
     public int visionRadius(){return  visionRadius;}
 
 
