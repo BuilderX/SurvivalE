@@ -10,7 +10,9 @@ public class NPC extends Entity{
 	
 	{
 	protected ArrayList<String> Sounds = new ArrayList<String>(213);	
+	protected Direction;	
 	}
+	
 	
 	@Override
 	public void update(float data) {
