@@ -4,9 +4,9 @@ package Calandar;
  * Created by Rook on 6/18/2015.
  */
 public class EatScreen {
+    Inventory items;
 
-
-  /*  public EatScreen(Creature player) {
+    public EatScreen(Creature player) {
         super(player);
     }
 
@@ -21,5 +21,5 @@ public class EatScreen {
     protected Screen use(Item item) {
         player.eat(item);
         return null;
-    }*/
+    }
 }
