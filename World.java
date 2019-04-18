@@ -5,23 +5,33 @@ import java.util.List;
 /**
  * Created by Rook on 6/18/2015.
  */
+
+
 public class World {
-                //Tile [][] tile;
+                Tile [][] tile;
                 private int width;
                 private int height;
                 Creature creature;
                 private List<Creature> creatures;
                 World world;
+                Tile indvTile;
                  
              World(){
 
 
                     }
-// Tile[][] Tiles
+  
     public World(int width, int height) {
         //this.tiles = tiles;
         this.width = width;
         this.height = height;
+      
+        for(int i = 0; i < tiles.length;i++){
+          for(int j = i; j < tiles[i].length;j++){
+              tiles[i][j] = new Tile();
+            
+          }
+        }
     }
 
     public Creature creature(int x, int y){
@@ -50,9 +60,10 @@ public class World {
     }
 
     public void dig(int x, int y) {
-       // if(tile(x,y).isDiggable()){
-       //  tiles[x][y] = Tile.Floor;}
-
+      if(tile(x,y).isDiggable()){
+        tiles[x][y] = Tile.Floor;
+      }
+     }
     }
 
     public void addAtEmptyLocation(Creature player) {
