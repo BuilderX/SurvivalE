@@ -1,4 +1,7 @@
 public class Game implements ApplicationListener {
+    Game(){
+    }
+    
     public void create () {
     }
 
